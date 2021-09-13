@@ -1,8 +1,7 @@
 import React from "react";
 import { Container } from "../../general";
-import PhoneEnabledIcon from "@material-ui/icons/PhoneEnabled";
-import ChatIcon from "@material-ui/icons/Chat";
-import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
+import { Menu } from "../";
+import ContactsIcon from "@material-ui/icons/Contacts";
 import "./topBar.scss";
 
 function TopBar({ menuOpen, setMenuOpen }) {
@@ -11,12 +10,15 @@ function TopBar({ menuOpen, setMenuOpen }) {
       <Container>
         <div className="topBar__inner">
           <a href="#home" className="topBar__logo">
-            Nurbolot
+            NUR<span>boloT</span>
           </a>
-          <div className="topBar__contact">
-            <PhoneEnabledIcon className="topBar__contact__item" />
-            <ChatIcon className="topBar__contact__item" />
-          </div>
+          <Menu />
+          <button className="topBar__contacts">
+            <ContactsIcon
+              className="topBar__contacts__icon"
+              style={{ fontSize: 35 }}
+            />
+          </button>
         </div>
       </Container>
     </header>
