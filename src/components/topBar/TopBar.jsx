@@ -4,16 +4,19 @@ import { Menu } from "../";
 import ContactsIcon from "@material-ui/icons/Contacts";
 import "./topBar.scss";
 
-function TopBar({ menuOpen, setMenuOpen }) {
+function TopBar({ contactsOpen, setContactsOpen }) {
   return (
-    <header className={"topBar" + menuOpen && "topBar--active"}>
+    <header className={"topBar"}>
       <Container>
         <div className="topBar__inner">
           <a href="#home" className="topBar__logo">
             NUR<span>boloT</span>
           </a>
           <Menu />
-          <button className="topBar__contacts">
+          <button
+            onClick={() => setContactsOpen(!contactsOpen)}
+            className="topBar__contacts"
+          >
             <ContactsIcon
               className="topBar__contacts__icon"
               style={{ fontSize: 35 }}

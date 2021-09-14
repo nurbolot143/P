@@ -1,4 +1,3 @@
-import "./App.scss";
 import {
   Contacts,
   Portfolio,
@@ -8,15 +7,20 @@ import {
   TopBar,
 } from "./components";
 
+import "./App.scss";
+
 function App() {
   return (
     <div className="app">
       <TopBar />
-      <Home />
-      <AboutMe />
-      <Skills />
-      <Portfolio />
-      <Contacts />
+
+      <div className="app__sections">
+        <Home />
+        <AboutMe />
+        <Skills />
+        <Portfolio />
+        <Contacts />
+      </div>
     </div>
   );
 }
