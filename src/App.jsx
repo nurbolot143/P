@@ -1,11 +1,4 @@
-import {
-  Contacts,
-  Portfolio,
-  AboutMe,
-  Skills,
-  TopBar,
-  Intro,
-} from "./components";
+import { Portfolio, AboutMe, Skills, TopBar, Intro } from "./components";
 
 import "./App.scss";
 
@@ -19,7 +12,6 @@ function App() {
         <AboutMe />
         <Skills />
         <Portfolio />
-        <Contacts />
       </div>
     </div>
   );

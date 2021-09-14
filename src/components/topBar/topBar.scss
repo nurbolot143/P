@@ -3,7 +3,7 @@
 .topBar {
   position: fixed;
   width: 100%;
-  background: $light;
+  background: $dark;
   z-index: 1;
 
   &__inner {
@@ -18,27 +18,25 @@
     font-weight: 700;
     font-size: 30px;
     letter-spacing: 1px;
-    color: $secondary-color;
+    color: $light;
 
     span {
       font-size: 33px;
       font-weight: 700;
-      color: $third-color;
+      color: $secondary-color;
     }
   }
 
-  &__contacts {
+  &__contact {
+    font-size: 30px;
+    font-weight: 700;
     height: 100%;
-    width: 50px;
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    background-color: $light;
+    background-color: $dark;
+    color: $secondary-color;
     z-index: 2px;
-
-    &__icon {
-      color: $secondary-color;
-    }
   }
 
   &__wrapper {

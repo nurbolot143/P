@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "../../general";
-import { Menu, Connection } from "../";
-import ContactsIcon from "@material-ui/icons/Contacts";
+import { Menu, Contact } from "../";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
@@ -11,7 +11,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import "./topBar.scss";
 
 function TopBar() {
-  const [connectionOpen, setConnectionOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   return (
     <header className={"topBar"}>
@@ -26,19 +26,15 @@ function TopBar() {
               { name: "aboutMe", link: "aboutMe" },
               { name: "skills", link: "skills" },
               { name: "portfolio", link: "portfolio" },
-              { name: "contacts", link: "contacts" },
             ]}
           />
           <button
-            className="topBar__contacts"
-            onClick={() => setConnectionOpen(!connectionOpen)}
+            className="topBar__contact"
+            onClick={() => setContactOpen(!contactOpen)}
           >
-            <ContactsIcon
-              className="topBar__contacts__icon"
-              style={{ fontSize: 35 }}
-            />
+            Contacts
           </button>
-          <Connection
+          <Contact
             items={[
               {
                 icon: <PhoneIcon style={{ fontSize: 35 }} />,
@@ -64,9 +60,13 @@ function TopBar() {
                 icon: <FacebookIcon style={{ fontSize: 35 }} />,
                 link: "https://www.facebook.com/",
               },
+              {
+                icon: <GitHubIcon style={{ fontSize: 35 }} />,
+                link: "https://github.com/nurbolot143",
+              },
             ]}
-            connectionOpen={connectionOpen}
-            setConnectionOpen={setConnectionOpen}
+            contactOpen={contactOpen}
+            setContactOpen={setContactOpen}
           />
         </div>
       </Container>
