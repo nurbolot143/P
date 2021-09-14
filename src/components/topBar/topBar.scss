@@ -28,13 +28,20 @@
   }
 
   &__contacts {
+    height: 100%;
+    width: 50px;
     border: none;
-    background: transparent;
     cursor: pointer;
     transition: 0.5s;
+    background-color: $light;
+    z-index: 2px;
 
     &__icon {
       color: $secondary-color;
     }
+  }
+
+  &__wrapper {
+    position: relative;
   }
 }

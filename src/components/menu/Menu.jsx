@@ -1,36 +1,19 @@
 import "./menu.scss";
 
-function Menu() {
+function Menu({ items }) {
   return (
-    <div className="menu">
+    <nav className="menu">
       <ul className="menu__list">
-        <li className="menu__item">
-          <a href="#" className="menu__link">
-            Home
-          </a>
-        </li>
-        <li className="menu__item">
-          <a href="#" className="menu__link">
-            About Me
-          </a>
-        </li>
-        <li className="menu__item">
-          <a href="#" className="menu__link">
-            Skills
-          </a>
-        </li>
-        <li className="menu__item">
-          <a href="#" className="menu__link">
-            Portfolio
-          </a>
-        </li>
-        <li className="menu__item">
-          <a href="#" className="menu__link">
-            Contacts
-          </a>
-        </li>
+        {items &&
+          items.map((item, idx) => (
+            <li key={`${item.name}_${idx}`} className="menu__item">
+              <a href={`#${item.link}`} className="menu__link">
+                {item.name}
+              </a>
+            </li>
+          ))}
       </ul>
-    </div>
+    </nav>
   );
 }
 
