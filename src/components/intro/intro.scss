@@ -13,12 +13,47 @@
   &__title {
     margin: 0;
     right: 20px;
-    padding-top: 100px;
+    padding-top: 150px;
     font-size: 50px;
     color: $light;
 
     span {
       color: $secondary-color;
     }
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 45px;
+    color: $accent-color;
+  }
+
+  a {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 30%;
+    border-radius: 50%;
+    background-color: $accent-color;
+    animation: blink 3s infinite ease;
+
+    .intro__icon {
+      color: $light;
+      font-size: 5rem;
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-color: $secondary-color;
+  }
+
+  100% {
+    background-color: $accent-color;
   }
 }
