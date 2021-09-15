@@ -17,15 +17,15 @@ function TopBar() {
     <header className={"topBar"}>
       <Container className="topBar__wrapper">
         <div className="topBar__inner">
-          <a href="#home" className="topBar__logo">
+          <a href="#intro" className="topBar__logo">
             NUR<span>boloT</span>
           </a>
           <Menu
             items={[
               { name: "home", link: "intro" },
+              { name: "portfolio", link: "portfolio" },
               { name: "aboutMe", link: "aboutMe" },
               { name: "skills", link: "skills" },
-              { name: "portfolio", link: "portfolio" },
             ]}
           />
           <button

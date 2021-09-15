@@ -9,9 +9,9 @@ function App() {
 
       <div className="app__sections">
         <Intro />
+        <Portfolio />
         <AboutMe />
         <Skills />
-        <Portfolio />
       </div>
     </div>
   );

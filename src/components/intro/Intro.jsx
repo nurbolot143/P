@@ -26,7 +26,7 @@ function Intro() {
         <h2>
           <span ref={animatedTextRef}></span>
         </h2>
-        <a href="#aboutMe">
+        <a href="#portfolio">
           <KeyboardArrowDownIcon className="intro__icon" />
         </a>
       </Container>
