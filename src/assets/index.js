@@ -1,0 +1,9 @@
+export { default as feature1 } from "./images/istockphoto-537331500-612x612.jpg";
+export { default as feature2 } from "./images/istockphoto-1047259374-612x612.jpg";
+export { default as feature3 } from "./images/istockphoto-1148960878-612x612.jpg";
+export { default as webApps1 } from "./images/istockphoto-1075599562-612x612.jpg";
+export { default as webApps2 } from "./images/istockphoto-1139938843-612x612.jpg";
+export { default as webApps3 } from "./images/istockphoto-1154261893-612x612.jpg";
+export { default as reactApps1 } from "./images/istockphoto-1163980659-612x612.jpg";
+export { default as reactApps2 } from "./images/istockphoto-1194720790-612x612.jpg";
+export { default as reactApps3 } from "./images/istockphoto-1188162447-612x612.jpg";
