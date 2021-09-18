@@ -1,0 +1,15 @@
+@import "../../vars";
+
+.works {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__slider {
+    height: 400px;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+  }
+}

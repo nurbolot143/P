@@ -1,4 +1,4 @@
-import { Portfolio, AboutMe, Skills, TopBar, Intro } from "./components";
+import { Portfolio, AboutMe, Skills, TopBar, Intro, Works } from "./components";
 
 import "./App.scss";
 
@@ -8,6 +8,7 @@ function App() {
       <TopBar />
 
       <div className="app__sections">
+        <Works />
         <Intro />
         <Portfolio />
         <AboutMe />
