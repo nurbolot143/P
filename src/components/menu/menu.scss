@@ -39,3 +39,42 @@
     }
   }
 }
+
+@media (max-width: 770px) {
+  .menu {
+    transform: translateX(100vw);
+    position: absolute;
+    background-color: $dark;
+    margin-top: 348px;
+    width: 100vw;
+    z-index: -1;
+    transition: all 0.8s ease;
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      margin-right: 25px;
+    }
+
+    &__item {
+      width: 80%;
+      & + & {
+        margin: 0;
+        border-top: 2px dotted $light;
+      }
+    }
+
+    &__link {
+      display: block;
+      &:hover::after {
+        width: 0;
+      }
+    }
+
+    &--active {
+      transform: translateX(0);
+      margin-left: -15px;
+    }
+  }
+}

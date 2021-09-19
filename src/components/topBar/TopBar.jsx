@@ -7,10 +7,12 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import MenuIcon from "@material-ui/icons/Menu";
 import "./topBar.scss";
 
 function TopBar() {
   const [contactOpen, setContactOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className={"topBar"}>
@@ -19,6 +21,13 @@ function TopBar() {
           <a href="#intro" className="topBar__logo">
             NUR<span>boloT</span>
           </a>
+          <button className="menu__btn">
+            <MenuIcon
+              className="menu__btn-icon"
+              onClick={() => setMenuOpen(!menuOpen)}
+            />
+          </button>
+
           <Menu
             items={[
               { name: "home", link: "intro" },
@@ -27,6 +36,8 @@ function TopBar() {
               { name: "skills", link: "skills" },
               { name: "contacts", link: "contacts" },
             ]}
+            setMenuOpen={setMenuOpen}
+            menuOpen={menuOpen}
           />
           <button
             className="topBar__contact"

@@ -30,16 +30,44 @@
 
   &__contact {
     height: 100%;
+    margin-top: -3px;
     padding: 0;
     border: none;
     cursor: pointer;
     transition: 0.5s;
     background-color: $dark;
     color: $secondary-color;
-    z-index: 2px;
   }
 
   &__wrapper {
     position: relative;
+  }
+
+  .menu {
+    &__btn {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      &-icon {
+        font-size: 40px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .topBar {
+    .menu {
+      &__btn {
+        display: block;
+      }
+    }
+
+    &__contact {
+      left: 12px;
+      order: -1;
+    }
   }
 }
