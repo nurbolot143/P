@@ -13,11 +13,11 @@
     margin-left: 100px;
     width: 300px;
     height: 360px;
-    transform: rotate(-30deg);
+    transform: rotate(6deg) skew(20deg, -7deg);
     background: url(../../assets/images/istockphoto-1047259374-612x612.jpg)
       no-repeat;
     background-size: cover;
-    box-shadow: $dark -20px -20px 20px;
+    box-shadow: $dark -15px 25px 20px;
   }
 
   &__content {
@@ -27,6 +27,7 @@
     h2 {
       text-transform: uppercase;
       font-weight: 400;
+      letter-spacing: 5px;
       font-size: 50px;
       color: $dark;
       left: 0;

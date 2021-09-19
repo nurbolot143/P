@@ -5,10 +5,8 @@ import ContactsIcon from "@material-ui/icons/Contacts";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
 import "./topBar.scss";
 
 function TopBar() {
@@ -47,20 +45,12 @@ function TopBar() {
                 link: "mailto:@nurbolot.boobekov.pls@gmail.com",
               },
               {
-                icon: <WhatsAppIcon style={{ fontSize: 35 }} />,
-                link: "https://wa.me/+996704690533",
-              },
-              {
                 icon: <TelegramIcon style={{ fontSize: 35 }} />,
                 link: "https://web.telegram.org/z/#-1155658217",
               },
               {
                 icon: <InstagramIcon style={{ fontSize: 35 }} />,
                 link: "https://www.instagram.com/jyldyzacademy/",
-              },
-              {
-                icon: <FacebookIcon style={{ fontSize: 35 }} />,
-                link: "https://www.facebook.com/",
               },
               {
                 icon: <GitHubIcon style={{ fontSize: 35 }} />,
