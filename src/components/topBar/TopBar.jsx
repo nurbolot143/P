@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "../../general";
 import { Menu, Contact } from "../";
+import ContactsIcon from "@material-ui/icons/Contacts";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
@@ -26,13 +27,14 @@ function TopBar() {
               { name: "portfolio", link: "portfolio" },
               { name: "aboutMe", link: "aboutMe" },
               { name: "skills", link: "skills" },
+              { name: "contacts", link: "contacts" },
             ]}
           />
           <button
             className="topBar__contact"
             onClick={() => setContactOpen(!contactOpen)}
           >
-            Contacts
+            <ContactsIcon style={{ fontSize: 40 }} />
           </button>
           <Contact
             items={[
