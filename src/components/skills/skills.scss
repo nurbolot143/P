@@ -58,9 +58,7 @@
       height: 100%;
       box-shadow: $dark 5px 5px 10px 1px;
       border-radius: 5px;
-      & + & {
-        margin-left: 60px;
-      }
+      margin: 0 30px;
 
       h3 {
         font-size: 30px;
@@ -117,6 +115,18 @@
 
     &:hover {
       background-color: $accent-color;
+    }
+  }
+}
+
+@media (max-width: 1146px) {
+  .skills {
+    &__slider {
+      max-width: 600px;
+
+      &-inner {
+        max-width: 400px;
+      }
     }
   }
 }

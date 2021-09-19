@@ -7,6 +7,7 @@ import "./skills.scss";
 
 function Skills() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const handleSubmit = (direction) => {
     if (direction === "prev") {
       setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : currentSlide);
