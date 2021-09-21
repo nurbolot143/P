@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "../../general";
-import { Menu, Contact } from "../";
+import { Menu, Contacts } from "../";
 import ContactsIcon from "@material-ui/icons/Contacts";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -11,7 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import "./topBar.scss";
 
 function TopBar() {
-  const [contactOpen, setContactOpen] = useState(false);
+  const [contactsOpen, setContactsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -34,18 +34,18 @@ function TopBar() {
               { name: "portfolio", link: "portfolio" },
               { name: "aboutMe", link: "aboutMe" },
               { name: "skills", link: "skills" },
-              { name: "contacts", link: "contacts" },
+              { name: "contact", link: "contact" },
             ]}
             setMenuOpen={setMenuOpen}
             menuOpen={menuOpen}
           />
           <button
             className="topBar__contact"
-            onClick={() => setContactOpen(!contactOpen)}
+            onClick={() => setContactsOpen(!contactsOpen)}
           >
             <ContactsIcon style={{ fontSize: 40 }} />
           </button>
-          <Contact
+          <Contacts
             items={[
               {
                 icon: <PhoneIcon style={{ fontSize: 35 }} />,
@@ -68,8 +68,8 @@ function TopBar() {
                 link: "https://github.com/nurbolot143",
               },
             ]}
-            contactOpen={contactOpen}
-            setContactOpen={setContactOpen}
+            contactsOpen={contactsOpen}
+            setContactsOpen={setContactsOpen}
           />
         </div>
       </Container>

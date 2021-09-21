@@ -4,7 +4,7 @@ import {
   Skills,
   TopBar,
   Intro,
-  Contacts,
+  Contact,
 } from "./components";
 
 import "./App.scss";
@@ -19,7 +19,7 @@ function App() {
         <Portfolio />
         <AboutMe />
         <Skills />
-        <Contacts />
+        <Contact />
       </div>
     </div>
   );

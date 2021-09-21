@@ -1,0 +1,13 @@
+@import "../../vars";
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: $dark;
+  color: $light;
+
+  p {
+    padding: 2px 0;
+  }
+}

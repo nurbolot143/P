@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import { Footer } from "..";
+import { Container } from "../../general";
 
 import "./contact.scss";
 
-function Contact({ items, contactOpen, setContactOpen }) {
+function Contact() {
+  const [message, setMessage] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setMessage(true);
+  };
+
   return (
-    <div className={"contact " + (contactOpen && "contact--active")}>
-      {items &&
-        items.map((item, idx) => (
-          <a
-            className="contact__item"
-            key={`${item.icon}_${idx}`}
-            href={item.link}
-            onClick={() => setContactOpen(false)}
-            target="_blanc"
-          >
-            {item.icon}
-          </a>
-        ))}
-    </div>
+    <section className="contact" id="contact">
+      <Container>
+        <div className="contact__content">
+          <h2>Contact Me</h2>
+
+          <form onSubmit={handleSubmit}>
+            <input type="name" name="name" placeholder="Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              type="submit"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <div className="contact__bottom">
+              <button>Send</button>
+              {message && <span>Thank you for your message!</span>}
+            </div>
+          </form>
+        </div>
+      </Container>
+      <Footer />
+    </section>
   );
 }
 
