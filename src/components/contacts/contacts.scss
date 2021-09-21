@@ -1,4 +1,5 @@
 @import "../../vars";
+@import "../../media";
 
 .contacts {
   position: absolute;
@@ -12,16 +13,16 @@
   z-index: -1;
 
   &__item {
+    width: 38px;
+    text-align: center;
     color: $secondary-color;
   }
 
   &--active {
     transform: translateY(0);
   }
-}
 
-@media (max-width: 770px) {
-  .contacts {
+  @include media(770) {
     left: 18px;
   }
 }

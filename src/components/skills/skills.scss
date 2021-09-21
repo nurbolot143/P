@@ -1,4 +1,5 @@
 @import "../../vars";
+@import "../../media";
 
 .skills {
   text-align: center;
@@ -17,6 +18,10 @@
     margin: 0 auto;
     width: 1000px;
     height: 400px;
+
+    @include media(1146) {
+      max-width: 600px;
+    }
 
     &::after {
       position: absolute;
@@ -48,6 +53,10 @@
       display: flex;
       z-index: -2;
       transition: all 1s ease;
+
+      @include media(1146) {
+        max-width: 400px;
+      }
     }
 
     &-item {
@@ -115,18 +124,6 @@
 
     &:hover {
       background-color: $accent-color;
-    }
-  }
-}
-
-@media (max-width: 1146px) {
-  .skills {
-    &__slider {
-      max-width: 600px;
-
-      &-inner {
-        max-width: 400px;
-      }
     }
   }
 }
