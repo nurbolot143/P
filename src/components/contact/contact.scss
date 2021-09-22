@@ -1,27 +1,95 @@
 @import "../../vars";
+@import "../../media";
 
 .contact {
-  position: absolute;
-  right: 17px;
-  top: 55px;
-  transform: translateY(-50vh);
-  max-height: 0;
-  display: flex;
-  flex-direction: column;
-  transition: all 2s ease;
-  z-index: -1;
+  height: 100vh;
+  text-align: center;
+  position: relative;
 
-  &__item {
-    color: $secondary-color;
+  &__content {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 5px;
+      font-size: 50px;
+      color: $dark;
+    }
+
+    form {
+      margin: 0 auto;
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include media(700) {
+        width: 100%;
+        padding: 0 25px;
+      }
+
+      input {
+        height: 30px;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: $third-color;
+        color: $dark;
+        border: none;
+        box-shadow: $dark 0 0 3px;
+        outline-style: none;
+      }
+
+      textarea {
+        height: 200px;
+        font-size: 18px;
+        font-family: inherit;
+        padding: 5px;
+        margin-bottom: 15px;
+        background-color: $third-color;
+        color: $dark;
+        box-shadow: $dark 0 0 3px;
+        border: none;
+        resize: none;
+        outline-style: none;
+      }
+
+      button {
+        padding: 5px 25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        border: none;
+        color: $light;
+        background-color: $secondary-color;
+        transition: all 0.4s;
+
+        &:hover {
+          background-color: $accent-color;
+        }
+      }
+
+      span {
+        padding: 5px 30px;
+        font-size: 30px;
+        background-color: $secondary-color;
+        text-align: center;
+        color: $light;
+      }
+    }
   }
 
-  &--active {
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 770px) {
-  .contact {
-    left: 18px;
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    align-items: center;
   }
 }

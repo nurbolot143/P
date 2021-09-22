@@ -5,9 +5,12 @@
 
   &__content {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background: url(../../assets/images/intro.png) no-repeat;
     background-size: contain;
-    background-position: 550px 0;
+    background-position: 80% 0;
   }
 
   &__title {
@@ -23,13 +26,11 @@
   }
 
   h2 {
-    margin-top: 40px;
     font-size: 45px;
     color: $accent-color;
   }
 
   a {
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;

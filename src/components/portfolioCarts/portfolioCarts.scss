@@ -33,3 +33,9 @@
     color: $light;
   }
 }
+
+@media (max-width: 1110px) {
+  .item {
+    margin: 0 20px;
+  }
+}

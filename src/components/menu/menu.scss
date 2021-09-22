@@ -1,13 +1,37 @@
 @import "../../vars";
+@import "../../media";
 
 .menu {
+  @include media(770) {
+    transform: translateX(100vw);
+    position: absolute;
+    background-color: $dark;
+    margin-top: 348px;
+    width: 100vw;
+    z-index: -1;
+    transition: all 0.8s ease;
+  }
+
   &__list {
     list-style: none;
     display: flex;
+
+    @include media(770) {
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      margin-right: 25px;
+    }
   }
 
   &__item + &__item {
     margin-left: 30px;
+
+    @include media(770) {
+      width: 80%;
+      margin: 0;
+      border-top: 2px dotted $light;
+    }
   }
 
   &__link {
@@ -18,6 +42,10 @@
     font-size: 18px;
     color: $light;
     text-transform: capitalize;
+
+    @include media(770) {
+      display: block;
+    }
 
     &::after {
       position: absolute;
@@ -32,47 +60,18 @@
 
     &:hover::after {
       width: 100%;
+      @include media(770) {
+        width: 0;
+      }
     }
 
     &--active {
       border-bottom: 3px solid $third-color;
     }
   }
-}
 
-@media (max-width: 770px) {
-  .menu {
-    transform: translateX(100vw);
-    position: absolute;
-    background-color: $dark;
-    margin-top: 348px;
-    width: 100vw;
-    z-index: -1;
-    transition: all 0.8s ease;
-
-    &__list {
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
-      margin-right: 25px;
-    }
-
-    &__item {
-      width: 80%;
-      & + & {
-        margin: 0;
-        border-top: 2px dotted $light;
-      }
-    }
-
-    &__link {
-      display: block;
-      &:hover::after {
-        width: 0;
-      }
-    }
-
-    &--active {
+  &--active {
+    @include media(770) {
       transform: translateX(0);
       margin-left: -15px;
     }
