@@ -1,5 +1,4 @@
 @import "../../vars";
-@import "../../media";
 
 .item {
   position: relative;
@@ -11,18 +10,6 @@
   padding: 3px 25px;
   cursor: pointer;
   transition: 0.5s;
-
-  @include media(1100) {
-    margin: 0 20px;
-  }
-
-  @include media(608) {
-    text-align: center;
-
-    & + & {
-      margin-top: 10px;
-    }
-  }
 
   span {
     content: "";
@@ -44,5 +31,11 @@
   &--active {
     background-color: $secondary-color;
     color: $light;
+  }
+}
+
+@media (max-width: 1110px) {
+  .item {
+    margin: 0 20px;
   }
 }
