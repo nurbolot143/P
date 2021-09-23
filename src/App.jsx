@@ -5,6 +5,7 @@ import {
   TopBar,
   Intro,
   Contact,
+  Footer,
 } from "./components";
 
 import "./App.scss";
@@ -16,10 +17,11 @@ function App() {
 
       <div className="app__sections">
         <Intro />
-        <Portfolio className="portfolio" />
+        <Portfolio />
         <AboutMe />
         <Skills />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

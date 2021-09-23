@@ -1,12 +1,22 @@
 @import "../../vars";
+@import "../../media";
 
 .portfolio {
+  padding-top: 100px;
   &__wrapper {
     height: 100%;
     display: flex;
     align-items: center;
     position: relative;
     justify-content: flex-end;
+
+    @include media(1100) {
+      flex-direction: column;
+    }
+  }
+
+  @include media(950) {
+    padding-top: 50px;
   }
 
   h2 {
@@ -18,12 +28,24 @@
     font-weight: 400;
     font-size: 50px;
     color: $dark;
+
+    @include media(1100) {
+      position: relative;
+      transform: rotate(0) translateY(0);
+    }
+
+    @include media(630) {
+      letter-spacing: 5px;
+    }
   }
 
   &__right {
     margin-right: 140px;
     display: flex;
     flex-direction: column;
+    @include media(1100) {
+      margin-right: 0;
+    }
   }
 
   &__category {
@@ -31,6 +53,10 @@
     padding: 0;
     list-style: none;
     display: flex;
+
+    @include media(608) {
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -49,10 +75,24 @@
     align-items: center;
     position: relative;
 
+    @include media(950) {
+      width: 600px;
+      margin-left: 5vw;
+      margin-top: 0;
+    }
+
+    @include media(608) {
+      margin-left: 0;
+    }
+
     &__slider {
       height: 400px;
       display: flex;
       transition: all 1s ease-out;
+
+      @include media(630) {
+        height: 350px;
+      }
     }
 
     &__slider-inner {
@@ -66,6 +106,9 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      @include media(950) {
+        width: 500px;
+      }
 
       h3 {
         position: absolute;
@@ -87,6 +130,15 @@
         width: 100%;
         height: 350px;
         object-fit: cover;
+
+        @include media(950) {
+          height: 250px;
+        }
+
+        @include media(530) {
+          width: 95vw;
+          height: auto;
+        }
       }
     }
 
@@ -105,6 +157,10 @@
       cursor: pointer;
       transition: 0.4s;
 
+      @include media(725) {
+        top: 350px;
+      }
+
       .portfolio__works__slider-arrow {
         width: 100%;
         height: 100%;
@@ -116,12 +172,20 @@
         .portfolio__works__slider-arrow {
           margin-left: 8px;
         }
+
+        @include media(725) {
+          left: 190px;
+        }
       }
 
       &-next {
         right: 0;
         .portfolio__works__slider-arrow {
           margin-left: 4px;
+        }
+
+        @include media(725) {
+          right: 290px;
         }
       }
 
@@ -131,52 +195,3 @@
     }
   }
 }
-
-// @media (max-width: 1110px) {
-//   .portfolio {
-//     h2 {
-//       position: relative;
-//       transform: rotate(0) translateX(0) translateY(0);
-//       letter-spacing: 5px;
-//       font-weight: 400;
-//       font-size: 50px;
-//       color: $dark;
-//       left: 0;
-//     }
-
-//     &__right {
-//       margin: 0;
-//     }
-
-//     &__category {
-//       margin: 0;
-//       justify-content: center;
-//     }
-//   }
-// }
-
-// @media (max-width: 920px) {
-//   .portfolio {
-//     &__works {
-//       width: 100vw;
-//       &__slider-btn {
-//         &-prev {
-//           left: 10px;
-//         }
-
-//         &-next {
-//           right: 110px;
-//         }
-//       }
-
-//       &__slider-inner {
-//         max-width: 100vw;
-//       }
-
-//       &__slider-item {
-//         max-width: 500px;
-//         margin: 0 15%;
-//       }
-//     }
-//   }
-// }
