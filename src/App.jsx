@@ -16,7 +16,7 @@ function App() {
 
       <div className="app__sections">
         <Intro />
-        <Portfolio />
+        <Portfolio className="portfolio" />
         <AboutMe />
         <Skills />
         <Contact />

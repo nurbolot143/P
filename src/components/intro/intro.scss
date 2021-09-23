@@ -1,6 +1,8 @@
 @import "../../vars";
+@import "../../media";
 
 .intro {
+  height: 100vh;
   background: $dark;
 
   &__content {
@@ -11,6 +13,10 @@
     background: url(../../assets/images/intro.png) no-repeat;
     background-size: contain;
     background-position: 80% 0;
+
+    @include media(770) {
+      background-size: cover;
+    }
   }
 
   &__title {
@@ -19,6 +25,10 @@
     padding-top: 150px;
     font-size: 50px;
     color: $light;
+
+    @include media(400) {
+      padding-top: 50px;
+    }
 
     span {
       color: $secondary-color;

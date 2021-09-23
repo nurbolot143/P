@@ -1,24 +1,22 @@
-.app {
-  height: 100vh;
+// .app {
+//   height: 100vh;
 
-  &__sections {
-    position: relative;
-    top: 55px;
-    height: calc(100vh - 55px);
-    width: 100%;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    overflow-x: hidden;
+//   &__sections {
+//     position: relative;
+//     top: 55px;
+//     height: calc(100vh - 55px);
+//     width: 100%;
+//     scroll-snap-type: y mandatory;
+//     scroll-behavior: smooth;
+//     scrollbar-width: none;
+//     overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+//     &::-webkit-scrollbar {
+//       display: none;
+//     }
 
-    > * {
-      width: 100vw;
-      height: calc(100vh - 55px);
-      scroll-snap-align: start;
-    }
-  }
-}
+//     >*{
+//      mt
+//     }
+//   }
+// }

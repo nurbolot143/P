@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Footer } from "..";
 import { Container } from "../../general";
 
 import "./contact.scss";
@@ -32,14 +31,11 @@ function Contact() {
               placeholder="Your Message"
               required
             ></textarea>
-            <div className="contact__bottom">
-              <button>Send</button>
-              {message && <span>Thank you for your message!</span>}
-            </div>
+            <button>Send</button>
+            {message && <span>Thank you for your message!</span>}
           </form>
         </div>
       </Container>
-      <Footer />
     </section>
   );
 }

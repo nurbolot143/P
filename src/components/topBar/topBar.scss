@@ -22,10 +22,18 @@
     letter-spacing: 1px;
     color: $light;
 
+    @include media(350) {
+      font-size: 25px;
+    }
+
     span {
       font-size: 33px;
       font-weight: 500;
       color: $secondary-color;
+
+      @include media(350) {
+        font-size: 25px;
+      }
     }
   }
 
