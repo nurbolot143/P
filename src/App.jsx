@@ -5,6 +5,7 @@ import {
   TopBar,
   Intro,
   Contact,
+  Footer,
 } from "./components";
 
 import "./App.scss";
@@ -20,6 +21,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

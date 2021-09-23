@@ -2,6 +2,7 @@
 @import "../../media";
 
 .contact {
+  padding: 50px 0;
   height: 100vh;
   text-align: center;
   position: relative;
@@ -61,6 +62,7 @@
       }
 
       button {
+        margin-bottom: 10px;
         padding: 5px 25px;
         text-transform: uppercase;
         text-decoration: none;
@@ -83,13 +85,5 @@
         color: $light;
       }
     }
-  }
-
-  &__bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row-reverse;
-    align-items: center;
   }
 }
